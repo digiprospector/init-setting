@@ -1,0 +1,10 @@
+if has('patch-8.1.2269')
+    " Latest YCM needs at least this version of vim
+    Plug 'ycm-core/YouCompleteMe'
+else
+    " Version compatible with the vim in Debian 10 buster
+    Plug 'ycm-core/YouCompleteMe', { 'branch':'legacy-vim' }
+endif
+Plug 'rdnetto/YCM-Generator'
+Plug 'jeaye/color_coded'
+
