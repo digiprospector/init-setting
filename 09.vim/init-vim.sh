@@ -36,8 +36,8 @@ else
 	make distclean
 	./configure --with-features=huge --enable-multibyte --enable-python3interp=yes --with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu --enable-luainterp=yes --enable-cscope --prefix=/usr/local --enable-gui=no --with-tlib=ncurses
 	make install
-	cd ..
-	rm -rf "vim*"
+	cd -
+	rm -rf $vim_src_folder
 fi
 
 apt install -y git curl cmake zlib1g-dev libclang-dev llvm
