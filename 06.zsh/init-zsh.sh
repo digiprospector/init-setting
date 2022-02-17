@@ -36,6 +36,8 @@ setup_oh_my_zsh()
 	echo "[[ -s ${user_folder}/.autojump/etc/profile.d/autojump.sh ]] && source ${user_folder}/.autojump/etc/profile.d/autojump.sh" >> ${user_folder}/.zshrc
 	echo bindkey  "^[[1~"   beginning-of-line >> ${user_folder}/.zshrc
 	echo bindkey  "^[[4~"   end-of-line >> ${user_folder}/.zshrc
+	echo bindkey  "e[H"   beginning-of-line >> ${user_folder}/.zshrc
+	echo bindkey  "e[F"   end-of-line >> ${user_folder}/.zshrc
 	
 }
 
