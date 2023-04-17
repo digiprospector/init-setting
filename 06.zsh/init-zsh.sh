@@ -14,7 +14,7 @@ setup_oh_my_zsh()
 	user_folder=$1
 	user=${user_folder:6}
 	if [ ! -d "${user_folder}/.oh-my-zsh" ] ; then
-		run_as_user $user "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
+		run_as_user $user "git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
 	fi
 	run_as_user $user "cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc"
 	if [ ! -d "${user_folder}/.autojump" ] ; then
@@ -22,11 +22,11 @@ setup_oh_my_zsh()
 	fi
 
 	if [ ! -d "${user_folder}/.oh-my-zsh/plugins/zsh-autosuggestions" ] ; then
-		run_as_user $user "git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions"
+		run_as_user $user "git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions"
 	fi
 
 	if [ ! -d "${user_folder}/.oh-my-zsh/plugins/zsh-syntax-highlighting" ] ; then
-		run_as_user $user "git clone git://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting"
+		run_as_user $user "git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting"
 	fi
 
 	#modify theme
