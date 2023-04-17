@@ -45,7 +45,7 @@ apt install -y zsh
 
 #install oh-my-zsh
 apt install -y git
-git clone git://github.com/joelthelion/autojump.git
+git clone https://github.com/joelthelion/autojump.git
 
 for user_folder in "/home"/*
 do
