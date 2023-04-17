@@ -20,9 +20,9 @@ setup_git()
 
 	run_as_user $user "mkdir -p ${user_folder}/.ssh"
 	run_as_user $user "echo Host github.com > $user_folder/.ssh/config"
-	run_as_user $user "echo \"  IdentityFile ~/.ssh/id_ed22519_github\"\n >> $user_folder/.ssh/config"
-	run_as_user $user "echo Host gitee.com > $user_folder/.ssh/config"
-	run_as_user $user "echo \"  IdentityFile ~/.ssh/id_ed22519_gitee\"\n >> $user_folder/.ssh/config"
+	run_as_user $user "echo \"  IdentityFile ~/.ssh/id_ed22519_github\n\" >> $user_folder/.ssh/config"
+	run_as_user $user "echo Host gitee.com >> $user_folder/.ssh/config"
+	run_as_user $user "echo \"  IdentityFile ~/.ssh/id_ed22519_gitee\n\" >> $user_folder/.ssh/config"
 }
 
 apt -y install git
